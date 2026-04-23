@@ -45,7 +45,7 @@
             margin: 0 auto 20px;
             border: 1px solid rgba(100, 149, 237, 0.5);
             color: #fff;
-            text-shadow: 0 0 5px rgba(100, 149, 237, 0.5);
+            text-shadow: 0 0 5px rgba(100, 149,237,0.5);
             max-width: 760px;
             position: relative;
             z-index: 1;
@@ -56,7 +56,6 @@
             text-align: center;
         }
 
-        /* 动态提示条样式 */
         .tip-marquee {
             width: 100%;
             height: 28px;
@@ -81,7 +80,6 @@
             100% { transform: translateX(-100%); }
         }
 
-        /* 标题 + 滚动公告 同行布局 */
         .title-row {
             display: flex;
             align-items: center;
@@ -108,9 +106,8 @@
             100% { background-position: 200% 0; }
         }
 
-        /* 右侧滚动公告栏（已缩短） */
         .marquee-box {
-            flex: 0 0 250px; /* 固定宽度：250px */
+            flex: 0 0 250px;
             width: 250px;
             height: 30px;
             background: rgba(0,0,0,0.4);
@@ -131,7 +128,7 @@
             animation: marquee 12s linear infinite;
         }
         @keyframes marquee {
-            0% { transform: translateX(250px); } /* 从公告栏右端开始 */
+            0% { transform: translateX(250px); }
             100% { transform: translateX(-100%); }
         }
 
@@ -161,36 +158,35 @@
             transform: translateY(-3px);
         }
 
-        /* 仅官方12个图标金色光晕动画 */
-        .official img {
-            position: relative;
-            z-index: 1;
-        }
-        .official::after {
-            content: '';
-            position: absolute;
-            top: 6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 44px;
-            height: 44px;
-            border-radius: 6px;
-            box-shadow: 0 0 12px gold, 0 0 28px goldenrod;
-            animation: glow 1.5s infinite alternate;
-            z-index: 0;
-        }
         @keyframes glow {
-            0% { opacity: 0.3; }
+            0% { opacity: 0.6; }
             100% { opacity: 1; }
         }
+
+        .g1::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #ffd700,0 0 35px #0055ff,0 0 60px rgba(255,215,0,0.5),0 0 80px rgba(0,85,255,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g2::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 18px #1a75ff,0 0 40px #0040cc,0 0 65px rgba(0,64,204,0.45),0 0 90px rgba(0,50,180,0.2);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g3::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 18px #2ee570,0 0 40px #00883a,0 0 65px rgba(0,136,58,0.45),0 0 90px rgba(0,100,40,0.2);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g4::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #8844ee,0 0 38px #6611cc,0 0 62px rgba(102,17,204,0.5),0 0 85px rgba(80,10,180,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g5::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #ffcc00,0 0 38px #ff9900,0 0 62px rgba(255,153,0,0.5),0 0 85px rgba(255,120,0,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g6::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #aa77ff,0 0 38px #c0c5d0,0 0 62px rgba(170,119,255,0.45),0 0 85px rgba(150,100,220,0.2);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g7::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #0a0a0a,0 0 35px #222222,0 0 60px rgba(30,30,30,0.5),0 0 80px rgba(15,15,15,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g8::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #ff7700,0 0 38px #e62e00,0 0 62px rgba(230,46,0,0.5),0 0 85px rgba(200,30,0,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g9::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #b398f5,0 0 35px #8b6cf0,0 0 60px rgba(139,108,240,0.5),0 0 80px rgba(110,80,210,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g10::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #a06020,0 0 38px #804010,0 0 62px rgba(128,64,16,0.5),0 0 85px rgba(100,50,10,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g11::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #704020,0 0 38px #4d2d16,0 0 62px rgba(77,45,22,0.5),0 0 85px rgba(60,35,15,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g12::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #e61919,0 0 38px #800000,0 0 62px rgba(128,0,0,0.55),0 0 85px rgba(100,0,0,0.3);animation:glow 1.5s infinite alternate;z-index:0;}
+
+        .official::after {display: none;}
 
         .card img {
             width: 44px;
             height: 44px;
-            border-radius: 6px;
+            border-radius:6px;
             object-fit: cover;
             margin-bottom: 6px;
             border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 2;
         }
         .card-title {
             font-size: 13px;
@@ -202,7 +198,8 @@
         }
         .bottom-slogan {
             margin-top: 60px;
-            text-align: center;
+            padding-left: 60px;
+            text-align: left;
             font-size: 18px;
             font-weight: bold;
             color: gold;
@@ -211,32 +208,22 @@
             position: relative;
             z-index: 1;
         }
-        a, a:focus, a:active, .card, .card:focus, img, img:focus, :focus {
-            outline: none !important;
-        }
-        img {
-            border: 0 !important;
-        }
-        .card, .card:hover {
-            box-shadow: none !important;
-        }
+        a,a:focus,a:active,.card,.card:focus,img,img:focus,:focus {outline: none !important;}
+        img {border: 0 !important;}
+        .card,.card:hover {box-shadow: none !important;}
     </style>
 </head>
 <body>
 
     <div class="notice">
         <h3>💡 帮助公告（可双指缩小）</h3>
-        <p>以下平台全是Ng旗下正版授权，充值达700后返388，人头派发后、站长将以向下级转账方式转入你钱包，成为站长下级每月充值达到200后，每月15号以向下级转账方式派发88-188红包，每月亏损都会以向下级转账方式转去你钱包，每亏损200得66红包，每月最后一天结算，站长每日20点查看下级数据</p>
-        
-        <!-- 动态滚动提示条 -->
+        <p>以下平台全是Ng旗下正版授权，充值达700后返388，成为站长下级每月充值达到200后，每月15号派发88-188红包，每亏损200得66红包，每月最后一天结算。以上全部以向下级转账方式派发；站长每日20点查看下级数据</p>
         <div class="tip-marquee">
             <div class="tip-inner">站长温馨提示：我希望你们来我网站玩模拟器时顺便点开平台注册上俩张，但我更希望你们来我网站玩模拟器是戒得差不多了</div>
         </div>
-        
-        <p>模拟器认准：kkcc.netlify.app（可复制）和https://t.hk.uy/cdfQ（可复制）</p>
+        <p>模拟器认准：kckc.love</p>
     </div>
 
-    <!-- 标题 + 右侧滚动公告 -->
     <div class="title-row">
         <div class="title-box">官方认证平台/.</div>
         <div class="marquee-box">
@@ -247,57 +234,57 @@
     </div>
 
     <div class="grid-container">
-        <a href="https://aj89z.top" target="_blank" class="card official">
-            <img src="https://s3.bmp.ovh/2026/04/19/HKSqHkch.jpg" alt="君临国际">
+        <a href="https://aj89z.top" target="_blank" class="card g1">
+            <img src="https://s3.bmp.ovh/2026/04/23/p8MXiujO.png" alt="君临国际">
             <span class="card-title">君临国际</span>
         </a>
-        <a href="https://x57wt.top" target="_blank" class="card official">
+        <a href="https://x57wt.top" target="_blank" class="card g2">
             <img src="https://s3.bmp.ovh/2026/04/19/iLZ4VQ8C.jpg" alt="无限娱乐新台">
             <span class="card-title">无限娱乐</span>
         </a>
-        <a href="https://31sgx.top" target="_blank" class="card official">
+        <a href="https://31sgx.top" target="_blank" class="card g3">
             <img src="https://s3.bmp.ovh/2026/04/19/5zRW9N1l.jpg" alt="新时代国际">
             <span class="card-title">新时代国际</span>
         </a>
-        <a href="https://t50xz.top" target="_blank" class="card official">
+        <a href="https://t50xz.top" target="_blank" class="card g4">
             <img src="https://s3.bmp.ovh/2026/04/19/ZEZeHku4.jpg" alt="征途国际">
             <span class="card-title">征途国际</span>
         </a>
     </div>
 
     <div class="grid-container" style="margin-top:10px;">
-        <a href="https://shturl.cc/7X24JNSHgTVWvNwVg0F9e2EUAS3oRPSbq8wMizzk35HeRazwK2TxyLBB2YNY2JGrCQeB" target="_blank" class="card official">
+        <a href="https://shturl.cc/7X24JNSHgTVWvNwVg0F9e2EUAS3oRPSbq8wMizzk35HeRazwK2TxyLBB2YNY2JGrCQeB" target="_blank" class="card g5">
             <img src="https://s3.bmp.ovh/2026/04/20/NJeSimio.png" alt="赏金国际">
             <span class="card-title">赏金国际</span>
         </a>
-        <a href="javascript:;" target="_blank" class="card official">
-            <img src="https://s3.bmp.ovh/2026/04/20/UOMslHHT.png" alt="梦想国际">
+        <a href="javascript:;" target="_blank" class="card g6">
+            <img src="https://s3.bmp.ovh/2026/04/23/R3J6MS24.png" alt="梦想国际">
             <span class="card-title">梦想国际</span>
         </a>
-        <a href="https://ydkzj.jgqvji.com/app/register.php?site_id=1056&topId=6791776682945150" target="_blank" class="card official">
+        <a href="ydkzj.jgqvji.com/app/register.php?site_id=1056&topId=6791776682945150" target="_blank" class="card g7">
             <img src="https://s3.bmp.ovh/2026/04/20/RkAnD2fu.png" alt="逐梦国际">
             <span class="card-title">逐梦国际</span>
         </a>
-        <a href="https://22bxy.top" target="_blank" class="card official">
+        <a href="https://22bxy.top" target="_blank" class="card g8">
             <img src="https://s3.bmp.ovh/2026/04/20/hAxRAolA.png" alt="星耀国际">
             <span class="card-title">星耀国际</span>
         </a>
     </div>
 
     <div class="grid-container">
-        <a href="https://lejva.tprsmi.com/app/register.php?site_id=1058&topId=3287474&selfPlanId=2506794" target="_blank" class="card official">
+        <a href="lejva.tprsmi.com/app/register.php?site_id=1058&topId=3287474&selfPlanId=2506794" target="_blank" class="card g9">
             <img src="https://s3.bmp.ovh/2026/04/20/CMPTstnL.png" alt="胜天国际">
             <span class="card-title">胜天国际</span>
         </a>
-        <a href="https://shturl.cc/TMKJM1VIrVEdMC5SPsPBbdHP6rANIWpAZpJKasSDSs9qfFrNaiGDc40bYg6cQtxh0ShpFemUKHcmaXfWmDve6GLbPJAUXnhMldb4lZOtIcjhyDn61lKMYf2VwQ" target="_blank" class="card official">
+        <a href="shturl.cc/TMKJM1VIrVEdMC5SPsPBbdHP6rANIWpAZpJKasSDSs9qfFrNaiGDc40bYg6cQtxh0ShpFemUKHcmaXfWmDve6GLbPJAUXnhMldb4lZOtIcjhyDn61lKMYf2VwQ" target="_blank" class="card g10">
             <img src="https://s3.bmp.ovh/2026/04/20/dBDpdX62.png" alt="旺财28">
             <span class="card-title">旺财28</span>
         </a>
-        <a href="https://onkrcy.fnbpsw.com/app/register.php?site_id=2080&pt=D3168146-533F-FB84-6091-77BE5CEA873F" target="_blank" class="card official">
+        <a href="onkrcy.fnbpsw.com/app/register.php?site_id=2080&pt=D3168146-533F-FB84-6091-77BE5CEA873F" target="_blank" class="card g11">
             <img src="https://s3.bmp.ovh/2026/04/20/qFSvT6xp.png" alt="凯旋娱乐">
             <span class="card-title">凯旋娱乐</span>
         </a>
-        <a href="https://gfvgx.jgqvji.com/app/register.php?site_id=800&pt=8106D3EE-6194-7360-150A-8BE3ABB1EE5F" target="_blank" class="card official">
+        <a href="gfvgx.jgqvji.com/app/register.php?site_id=800&pt=8106D3EE-6194-7360-150A-8BE3ABB1EE5F" target="_blank" class="card g12">
             <img src="https://s3.bmp.ovh/2026/04/20/3vHbbLad.png" alt="壹号娱乐">
             <span class="card-title">壹号娱乐</span>
         </a>
@@ -371,7 +358,10 @@
     </div>
 
     <div class="bottom-slogan">
-        人生南北多歧路，上分认准这条路：kkcc.netlify.app
+        人生南北多歧路，上分认准这条路：kckc.love（永久地址）
+    </div>
+    <div class="bottom-slogan" style="margin-top:10px;">
+        岁月风尘皆过往，踏实做事路宽广：638246989（永久旺旺）
     </div>
 
 </body>
