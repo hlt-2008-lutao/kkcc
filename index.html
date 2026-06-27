@@ -11,7 +11,8 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html, body {
+        html,
+        body {
             width: 800px;
             min-width: 800px;
             min-height: 100vh;
@@ -33,19 +34,19 @@
             top: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             z-index: -1;
             pointer-events: none;
         }
 
         .notice {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 12px;
             padding: 16px;
             margin: 0 auto 20px;
             border: 1px solid rgba(100, 149, 237, 0.5);
             color: #fff;
-            text-shadow: 0 0 5px rgba(100, 149,237,0.5);
+            text-shadow: 0 0 5px rgba(100, 149, 237, 0.5);
             max-width: 760px;
             position: relative;
             z-index: 1;
@@ -76,8 +77,12 @@
             animation: tipMove 25s linear infinite;
         }
         @keyframes tipMove {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
         .title-row {
@@ -98,19 +103,23 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: shine 3s linear infinite;
-            text-shadow: 0 0 12px rgba(180,180,180,0.6), 0 0 24px rgba(150,150,150,0.4);
+            text-shadow: 0 0 12px rgba(180, 180, 180, 0.6), 0 0 24px rgba(150, 150, 150, 0.4);
             white-space: nowrap;
         }
         @keyframes shine {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
         }
 
         .marquee-box {
             flex: 0 0 250px;
             width: 250px;
             height: 30px;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0, 0, 0, 0.4);
             border: 1px solid gold;
             border-radius: 6px;
             overflow: hidden;
@@ -128,8 +137,12 @@
             animation: marquee 12s linear infinite;
         }
         @keyframes marquee {
-            0% { transform: translateX(250px); }
-            100% { transform: translateX(-100%); }
+            0% {
+                transform: translateX(250px);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
         .grid-container {
@@ -159,22 +172,52 @@
         }
 
         @keyframes glow {
-            0% { opacity: 0.6; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
-        .g1::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #ffd700,0 0 35px #0055ff,0 0 60px rgba(255,215,0,0.5),0 0 80px rgba(0,85,255,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
-        .g2::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:6px;box-shadow:0 0 15px #ffd700,0 0 35px #0055ff,0 0 60px rgba(255,215,0,0.5),0 0 80px rgba(0,85,255,0.25);animation:glow 1.5s infinite alternate;z-index:0;}
+        .g1::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            box-shadow: 0 0 15px #ffd700, 0 0 35px #0055ff, 0 0 60px rgba(255, 215, 0, 0.5), 0 0 80px rgba(0, 85, 255, 0.25);
+            animation: glow 1.5s infinite alternate;
+            z-index: 0;
+        }
+        .g2::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            box-shadow: 0 0 15px #ffd700, 0 0 35px #0055ff, 0 0 60px rgba(255, 215, 0, 0.5), 0 0 80px rgba(0, 85, 255, 0.25);
+            animation: glow 1.5s infinite alternate;
+            z-index: 0;
+        }
 
-        .official::after {display: none;}
+        .official::after {
+            display: none;
+        }
 
         .card img {
             width: 44px;
             height: 44px;
-            border-radius:6px;
+            border-radius: 6px;
             object-fit: cover;
             margin-bottom: 6px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             position: relative;
             z-index: 2;
         }
@@ -198,9 +241,23 @@
             position: relative;
             z-index: 1;
         }
-        a,a:focus,a:active,.card,.card:focus,img,img:focus,:focus {outline: none !important;}
-        img {border: 0 !important;}
-        .card,.card:hover {box-shadow: none !important;}
+        a,
+        a:focus,
+        a:active,
+        .card,
+        .card:focus,
+        img,
+        img:focus,
+        :focus {
+            outline: none !important;
+        }
+        img {
+            border: 0 !important;
+        }
+        .card,
+        .card:hover {
+            box-shadow: none !important;
+        }
     </style>
 </head>
 <body>
@@ -228,10 +285,14 @@
             <img src="https://s3.bmp.ovh/2026/04/23/p8MXiujO.png" alt="君临国际">
             <span class="card-title">君临国际</span>
         </a>
-        <!-- 聚鑫汇 - 已更换为新图标地址，并加入 referrerpolicy 防止防盗链 -->
         <a href="https://uh37j.top" target="_blank" class="card g2">
             <img src="https://s3.bmp.ovh/2026/06/27/6m7jcJ8H.png" alt="聚鑫汇" referrerpolicy="no-referrer">
             <span class="card-title">聚鑫汇</span>
+        </a>
+        <!-- 梦想国际（已更新链接和图标） -->
+        <a href="https://mn48z.top" target="_blank" class="card g2">
+            <img src="https://s3.bmp.ovh/2026/04/23/R3J6MS24.png" alt="梦想国际" referrerpolicy="no-referrer">
+            <span class="card-title">梦想国际</span>
         </a>
     </div>
 
